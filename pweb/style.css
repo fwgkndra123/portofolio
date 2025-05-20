@@ -1,0 +1,276 @@
+/* Reset dan dasar styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  color: #f0f0f0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Background dengan foto dan overlay transparan */
+body {
+  position: relative;
+  min-height: 100vh;
+  background: url('images/bg.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: -1;
+}
+
+/* Container utama */
+.container {
+  flex: 1;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 0 3rem 0;
+}
+
+/* Header */
+header {
+  background: rgba(25, 25, 25, 0.75);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #00e0ff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-weight: 600;
+}
+
+nav a {
+  color: #00e0ff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #00e0ff;
+  color: #111;
+}
+
+/* Section */
+section {
+  background: rgba(15, 15, 15, 0.75);
+  padding: 3rem 2rem 4rem 2rem;
+  margin-top: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 18px 3px rgba(0, 224, 255, 0.25);
+  text-align: center;
+}
+
+section h1, section h2 {
+  margin-bottom: 1.5rem;
+  color: #00e0ff;
+  text-shadow: 0 0 8px #00e0ff;
+}
+
+section p {
+  max-width: 760px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  color: #d3d3d3;
+}
+
+/* Tombol utama */
+.btn-primary {
+  background-color: #00e0ff;
+  color: #111;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  box-shadow: 0 0 14px #00e0ff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #00b3cc;
+  color: #fff;
+}
+
+/* Gambar About Me */
+.about-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 18px #00e0ff;
+  margin-bottom: 1.8rem;
+}
+
+/* List pengalaman */
+.experience-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.experience-item {
+  background: rgba(0, 224, 255, 0.1);
+  border: 1.5px solid #00e0ff;
+  border-radius: 12px;
+  width: 220px;
+  padding: 1rem;
+  box-shadow: 0 0 16px #00e0ff88;
+  transition: transform 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-10px);
+}
+
+.experience-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+}
+
+.experience-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  color: #00e0ff;
+}
+
+.experience-desc {
+  font-size: 0.95rem;
+  color: #cceeff;
+}
+
+/* Sertifikat */
+.certificate-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.certificate-item {
+  background: rgba(0, 224, 255, 0.12);
+  border: 1.5px solid #00e0ff;
+  border-radius: 12px;
+  width: 180px;
+  padding: 1rem;
+  box-shadow: 0 0 15px #00e0ffaa;
+  transition: scale 0.3s ease;
+}
+.certificate-item:hover {
+  scale: 1.05;
+}
+
+.certificate-img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 0.7rem;
+}
+
+.certificate-name {
+  font-weight: 600;
+  color: #00e0ff;
+  font-size: 1rem;
+}
+
+/* Kontak */
+.contact-list {
+  list-style: none;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+  color: #d0f7ff;
+  font-size: 1.1rem;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.3rem;
+  border-bottom: 1px solid rgba(0, 224, 255, 0.3);
+  padding-bottom: 0.6rem;
+  transition: background-color 0.2s ease;
+}
+
+.contact-list li:hover {
+  background-color: rgba(0, 224, 255, 0.1);
+  border-radius: 8px;
+}
+
+.contact-list i {
+  font-size: 1.5rem;
+  min-width: 28px;
+  color: #00e0ff;
+}
+
+/* Footer dengan animasi marquee */
+footer {
+  text-align: center;
+  padding: 1.8rem 0;
+  font-size: 1.1rem;
+  color: #a0eaff;
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: inset 0 1px 6px rgba(0, 224, 255, 0.6);
+  font-weight: 600;
+  overflow: hidden;
+  position: relative;
+}
+
+footer .marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  animation: scroll-left 25s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+/* Responsif */
+@media (max-width: 700px) {
+  .experience-list, .certificate-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
